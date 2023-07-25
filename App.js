@@ -24,8 +24,11 @@ export default function App() {
   }
 
   return (
-    // <RootSiblingParent>
+    // <View style={styles.container}>
       <MainStackScreen />
+    // </View>
+    // <RootSiblingParent>
+    // <MainStackScreen />
     // </RootSiblingParent>
     // <View style={styles.container}>
     //   <Text>Open up App.js to start working on your app!</Text>
