@@ -1,7 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import * as SplashScreen from 'expo-splash-screen'; // 控制启动页的包
+
+import MainStackScreen from './src/MainStackScreen'
+// import { navigate } from './src/RootNavigation'; // 这个是封装的一个工具，用来进行在js代码中的跳转的
 
 export default function App() {
   const [appIsReady, setAppIsReady] = useState(false);
@@ -21,10 +24,19 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    // <RootSiblingParent>
+      <MainStackScreen />
+    // </RootSiblingParent>
+    // <View style={styles.container}>
+    //   <Text>Open up App.js to start working on your app!</Text>
+    //   <Button
+    //     onPress={() => navigate('LoginScreen')}
+    //     title="Learn More"
+    //     color="#841584"
+    //     accessibilityLabel="Learn more about this purple button"
+    //   />
+    //   <StatusBar style="auto" />
+    // </View>
   );
 }
 
