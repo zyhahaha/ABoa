@@ -7,15 +7,15 @@ import MainStackScreen from './src/libs/MainStackScreen'
 // import { navigate } from './src/RootNavigation'; // 这个是封装的一个工具，用来进行在js代码中的跳转的
 
 export default function App() {
-  const [appIsReady, setAppIsReady] = useState(false);
+  const [appIsReady, setAppIsReady] = useState(true);
   // const [root, setRoot] = useState();
   useEffect(() => {
     SplashScreen.preventAutoHideAsync(); // 保证项目启动后，系统启动页一直显示
   }, []);
 
-  setTimeout(() => {
-    setAppIsReady(true)
-  }, 1000)
+  // setTimeout(() => {
+  //   setAppIsReady(true)
+  // }, 0)
 
   if (!appIsReady) {
     return null;

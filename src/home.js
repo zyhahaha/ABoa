@@ -3,6 +3,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { navigate } from './libs/RootNavigation'; // 这个是封装的一个工具，用来进行在js代码中的跳转的
 import { Button } from '@rneui/base';
+import { Icon } from '@rneui/themed';
 
 // import tabImage from '../img/tab/tabImage';
 // import I18n from '../language/index';
@@ -17,7 +18,10 @@ export default function BottomTabScreen() {
         <View style={{
             paddingTop: 30
         }}>
-            <Button title='Welcome'/>
+            <Button title='Welcome' />
+            
+            <Icon
+                name='rowing' />
         </View>
         
         // <View>
