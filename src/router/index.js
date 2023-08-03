@@ -1,5 +1,5 @@
-import LoginScreen from './pages/login';
-import UserDetails from './pages/user';
+import LoginScreen from '../pages/login';
+import UserDetails from '../pages/user';
 
 export default [
   // 登录界面
