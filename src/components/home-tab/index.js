@@ -6,7 +6,7 @@ import Growth from './growth'
 import Photo from './photo'
 
 export default () => {
-    const [index, setIndex] = React.useState(2);
+    const [index, setIndex] = React.useState(0);
 
     return (
         <>
