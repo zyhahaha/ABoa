@@ -4,7 +4,7 @@ import { Text } from '@rneui/themed';
 export default () => {
     return (
         <>
-            <Text h5>feed</Text>
+            <Text h5>growth</Text>
         </>
     );
 };
