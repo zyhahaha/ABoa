@@ -17,7 +17,7 @@ export default () => {
                     backgroundColor: 'white',
                     height: 3,
                 }}
-                variant="primary"
+                variant="default"
             >
                 <Tab.Item
                     titleStyle={{ fontSize: 12 }}
