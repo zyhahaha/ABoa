@@ -39,8 +39,9 @@ export default class Photo extends Component {
         return (
             <>
                 <View style={{
-                        height: 200
-                    }}>
+                    position: 'relative',
+                    height: 200
+                }}>
                     <Image
                         source={{ uri: 'https://awildgeographer.files.wordpress.com/2015/02/john_muir_glacier.jpg' }}
                         containerStyle={{
@@ -49,6 +50,34 @@ export default class Photo extends Component {
                         }}
                         PlaceholderContent={<ActivityIndicator />}
                     />
+
+                    <View style={{
+                        position: 'absolute',
+                        bottom: 30,
+                        left: 30,
+                    }}>
+                        <Image
+                            source={{ uri: 'https://awildgeographer.files.wordpress.com/2015/02/john_muir_glacier.jpg' }}
+                            containerStyle={{
+                                width: 50,
+                                height: 50,
+                                borderRadius: 50
+                            }}
+                            PlaceholderContent={<ActivityIndicator />}
+                        />
+                    </View>
+                    <View style={{
+                        position: 'absolute',
+                        bottom: 38,
+                        left: 90,
+                    }}>
+                        <Text style={{
+                            color: '#fff'
+                        }}>赵小福</Text>
+                        <Text style={{
+                            color: '#fff'
+                        }}>4个月28天</Text>
+                    </View>
                 </View>
                 {/* <Card>
                     <Card.Image
