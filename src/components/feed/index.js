@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 // import { View, Modal, TouchableNativeFeedback, Text } from 'react-native';
 // import { Icon, Image, Tab, Text, TabView } from '@rneui/themed';
-import { View, Modal } from 'react-native';
-import { Text, Card } from '@rneui/themed';
+import { View, Modal, ActivityIndicator } from 'react-native';
+import { Text, Card, Image } from '@rneui/themed';
 import ImageViewer from 'react-native-image-zoom-viewer';
 
 // const images = [{
@@ -38,9 +38,19 @@ export default class Photo extends Component {
     render() {
         return (
             <>
-                <Card>
-                    {/* <Card.Title>HELLO WORLD</Card.Title>
-                    <Card.Divider /> */}
+                <View style={{
+                        height: 200
+                    }}>
+                    <Image
+                        source={{ uri: 'https://awildgeographer.files.wordpress.com/2015/02/john_muir_glacier.jpg' }}
+                        containerStyle={{
+                            width: '100%',
+                            flex: 1,
+                        }}
+                        PlaceholderContent={<ActivityIndicator />}
+                    />
+                </View>
+                {/* <Card>
                     <Card.Image
                         style={{ padding: 0 }}
                         source={{
@@ -52,7 +62,7 @@ export default class Photo extends Component {
                         The idea with React Native Elements is more about component
                         structure than actual design.
                     </Text>
-                </Card>
+                </Card> */}
 
                 {/* <View
                     style={{

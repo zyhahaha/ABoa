@@ -19,11 +19,6 @@ import HomeTab from './components/home-tab'
 export default function BottomTabScreen() {
     return (
         <>
-            
-            <View style={{
-                paddingTop: 30
-            }}></View>
-
             <Feed />
             <HomeTab />
         </>
