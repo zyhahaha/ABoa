@@ -82,7 +82,7 @@ export default class Photo extends Component {
                         data={images}
                         style={styles.list}
                         numColumns={2}
-                        keyExtractor={(e) => e}
+                        keyExtractor={ e => e.url }
                         renderItem={({ item, index }) => (
                             // <View style={{
                             //     padding: 20
