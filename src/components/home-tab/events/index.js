@@ -1,73 +1,47 @@
-import React, { Component } from 'react';
-import { Text } from '@rneui/themed';
-import StepIndicator from 'react-native-step-indicator';
+import React from 'react';
+import {
+    SafeAreaView, ScrollView,
+    StyleSheet,
+    View
+} from 'react-native';
+import { Text, Card } from '@rneui/themed';
 
-const labels = ["Cart", "Delivery Address", "Order Summary", "Payment Method", "Track", "Track", "Track", "Track"];
-const customStyles = {
-    stepIndicatorSize: 25,
-    currentStepIndicatorSize: 30,
-    separatorStrokeWidth: 2,
-    currentStepStrokeWidth: 3,
-    stepStrokeCurrentColor: '#fe7013',
-    stepStrokeWidth: 3,
-    stepStrokeFinishedColor: '#fe7013',
-    stepStrokeUnFinishedColor: '#aaaaaa',
-    separatorFinishedColor: '#fe7013',
-    separatorUnFinishedColor: '#aaaaaa',
-    stepIndicatorFinishedColor: '#fe7013',
-    stepIndicatorUnFinishedColor: '#ffffff',
-    stepIndicatorCurrentColor: '#ffffff',
-    stepIndicatorLabelFontSize: 13,
-    currentStepIndicatorLabelFontSize: 13,
-    stepIndicatorLabelCurrentColor: '#fe7013',
-    stepIndicatorLabelFinishedColor: '#ffffff',
-    stepIndicatorLabelUnFinishedColor: '#aaaaaa',
-    labelColor: '#999999',
-    labelSize: 13,
-    currentStepLabelColor: '#fe7013'
-}
+export default () => {
+    return (
+        <>
+            <SafeAreaView>
+                <ScrollView>
+                    <View style={{
+                        height: 500,
+                        paddingTop: 10,
+                        paddingLeft: 10
+                    }}>
+                        <View style={{
+                            height: 300,
+                            borderStyle: 'solid',
+                            borderLeftWidth: 2,
+                            borderLeftColor: '#ccc'
+                        }}>
+                            <View style={{
+                                height: 10,
+                                width: 10,
+                                borderRadius: 10,
+                                backgroundColor: '#ccc'
+                            }}></View>
+                            <Text>xxx</Text>
 
-export default class Events extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            currentPosition: 3
-        }
-    }
-
-    onPageChange(position) {
-        console.log('xxx', this.setState, position)
-        // this.setState({ currentPosition: position++ });
-    }
-
-    renderStepIndicatorFn() {
-        return (
-            <>
-                <Text h5></Text>
-            </>
-        )
-    }
-
-    renderLabelFn() {
-        return (
-            <>
-                <Text h5>growth</Text>
-            </>
-        )
-    }
-
-    render() {
-        return (
-            <StepIndicator
-                direction="vertical"
-                customStyles={customStyles}
-                currentPosition={this.state.currentPosition}
-                labels={labels}
-                onPress={this.onPageChange}
-                renderLabel={this.renderLabelFn}
-                renderStepIndicator={this.renderStepIndicatorFn}
-            />
-        )
-    }
-}
+                            <View style={{
+                                marginLeft: -6,
+                                height: 10,
+                                width: 10,
+                                borderRadius: 10,
+                                backgroundColor: '#ccc'
+                            }}></View>
+                            <Text>xxx</Text>
+                        </View>
+                   </View>
+                </ScrollView>
+            </SafeAreaView>
+        </>
+    );
+};
