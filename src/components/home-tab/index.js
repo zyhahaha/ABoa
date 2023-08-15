@@ -10,7 +10,7 @@ export default () => {
 
     return (
         <>
-            <Tab
+            {/* <Tab
                 value={index}
                 onChange={(e) => setIndex(e)}
                 indicatorStyle={{
@@ -31,7 +31,7 @@ export default () => {
                     titleStyle={{ fontSize: 12 }}
                     icon={{ name: 'images', type: 'ionicon', color: 'white' }}
                 />
-            </Tab>
+            </Tab> */}
 
             <TabView value={index} onChange={setIndex} animationType="spring">
                 <TabView.Item style={{ backgroundColor: '', width: '100%' }}>

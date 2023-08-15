@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import { View, Modal, TouchableNativeFeedback, Text } from 'react-native';
 // import { Icon, Image, Tab, Text, TabView } from '@rneui/themed';
 import { View, Modal, ActivityIndicator } from 'react-native';
-import { Text, Card, Image } from '@rneui/themed';
+import { Text, Tab, Image } from '@rneui/themed';
 import ImageViewer from 'react-native-image-zoom-viewer';
 
 // const images = [{
@@ -35,6 +35,10 @@ export default class Photo extends Component {
         }
     }
 
+    setIndex(value) {
+        this.state.index = value
+    }
+
     render() {
         return (
             <>
@@ -53,7 +57,7 @@ export default class Photo extends Component {
 
                     <View style={{
                         position: 'absolute',
-                        bottom: 30,
+                        bottom: 50,
                         left: 30,
                     }}>
                         <Image
@@ -68,7 +72,7 @@ export default class Photo extends Component {
                     </View>
                     <View style={{
                         position: 'absolute',
-                        bottom: 38,
+                        bottom: 58,
                         left: 90,
                     }}>
                         <Text style={{
@@ -77,6 +81,63 @@ export default class Photo extends Component {
                         <Text style={{
                             color: '#fff'
                         }}>4个月28天</Text>
+                    </View>
+
+                    <View style={{
+                        position: 'absolute',
+                        bottom: 0,
+                        left: 0,
+                        flexDirection: 'row'
+                    }}>
+                        <View style={{
+                            flex: 1,
+                            height: 25,
+                            // backgroundColor: '#000',
+                            // borderStyle: 'solid',
+                            // borderBottomWidth: 1,
+                            // borderBottomColor: 'red'
+                        }}><Text style={{ textAlign: 'center', color: '#fff' }}>首页</Text></View>
+                        <View style={{
+                            flex: 1,
+                            height: 25,
+                            // backgroundColor: '#000',
+                            // borderStyle: 'solid',
+                            // borderBottomWidth: 1,
+                            // borderBottomColor: 'red'
+                        }}><Text style={{ textAlign: 'center', color: '#fff' }}>成长记录</Text></View>
+                        <View style={{
+                            flex: 1,
+                            height: 25,
+                            // backgroundColor: '#000',
+                            // borderStyle: 'solid',
+                            // borderBottomWidth: 1,
+                            // borderBottomColor: 'red'
+                        }}><Text style={{ textAlign: 'center', color: '#fff' }}>相册</Text></View>
+                    {/* <Tab
+                        value={this.state.index}
+                        onChange={(e) => this.setIndex(e)}
+                        containerStyle={{
+                            backgroundColor: 'rgba(0, 0, 0, 0)',
+                        }}
+                        indicatorStyle={{
+                            backgroundColor: 'rgba(0, 0, 0, 1)',
+                            height: 3,
+                        }}
+                        variant="default"
+                    >
+                        <Tab.Item
+                            titleStyle={{ fontSize: 12 }}
+                            icon={{ name: 'timer', type: 'ionicon', color: 'white' }}
+                        />
+                        <Tab.Item
+                            titleStyle={{ fontSize: 12 }}
+                            icon={{ name: 'heart', type: 'ionicon', color: 'white' }}
+                        />
+                        <Tab.Item
+                            titleStyle={{ fontSize: 12 }}
+                            icon={{ name: 'images', type: 'ionicon', color: 'white' }}
+                        />
+                    </Tab> */}
                     </View>
                 </View>
                 {/* <Card>
