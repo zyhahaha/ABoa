@@ -5,8 +5,8 @@ import Events from './events'
 import Growth from './growth'
 import Photo from './photo'
 
-export default () => {
-    const [index, setIndex] = React.useState(0);
+export default ({index, setIndex}) => {
+    // const [index, setIndex] = React.useState(0);
 
     return (
         <>
@@ -38,10 +38,10 @@ export default () => {
                     <Events />
                 </TabView.Item>
                 <TabView.Item style={{ backgroundColor: '', width: '100%' }}>
-                    <Growth />
+                    <Photo />
                 </TabView.Item>
                 <TabView.Item style={{ backgroundColor: '', width: '100%' }}>
-                    <Photo />
+                    {/* <Growth /> */}
                 </TabView.Item>
             </TabView>
         </>

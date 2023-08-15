@@ -5,10 +5,12 @@ import Feed from './components/feed'
 import HomeTab from './components/home-tab'
 
 export default function BottomTabScreen() {
+    const [index, setIndex] = React.useState(0);
+
     return (
         <>
-            <Feed />
-            <HomeTab />
+            <Feed index={{index, setIndex}} />
+            <HomeTab index={{index, setIndex}} />
         </>
 
         // <Button title='Welcome' />

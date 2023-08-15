@@ -5,16 +5,8 @@ import { Text, Image } from '@rneui/themed';
 export default class Photo extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            index: 0,
-            modalVisible: false
-        }
     }
 
-    setIndex(value) {
-        this.state.index = value
-    }
 
     render() {
         return (
@@ -73,11 +65,11 @@ export default class Photo extends Component {
                         <View style={{
                             flex: 1,
                             height: 25,
-                        }}><Text style={{ textAlign: 'center', color: '#fff' }}>成长记录</Text></View>
+                        }}><Text style={{ textAlign: 'center', color: '#fff' }}>相册</Text></View>
                         <View style={{
                             flex: 1,
                             height: 25,
-                        }}><Text style={{ textAlign: 'center', color: '#fff' }}>相册</Text></View>
+                        }}><Text style={{ textAlign: 'center', color: '#fff' }}>成长记录</Text></View>
                     </View>
 
                     <View style={{
@@ -89,44 +81,44 @@ export default class Photo extends Component {
                         <View style={{ flex: 1, height: 2, backgroundColor: 'transparent' }}>
                             <Text style={{ textAlign: 'center', color: 'transparent' }}>---</Text>
                         </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
-                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
+                        <View style={{ flex: 1, height: 2, backgroundColor: '#2D8cF0' }}>
+                            <Text style={{ textAlign: 'center', color: '#2D8cF0' }}>---</Text>
                         </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
-                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
+                        <View style={{ flex: 1, height: 2, backgroundColor: '#2D8cF0' }}>
+                            <Text style={{ textAlign: 'center', color: '#2D8cF0' }}>---</Text>
                         </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
-                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
-                        </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: 'transparent' }}>
-                            <Text style={{ textAlign: 'center', color: 'transparent' }}>---</Text>
-                        </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
-                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
-                        </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
-                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
-                        </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
-                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
-                        </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
-                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
-                        </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
-                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
+                        <View style={{ flex: 1, height: 2, backgroundColor: '#2D8cF0' }}>
+                            <Text style={{ textAlign: 'center', color: '#2D8cF0' }}>---</Text>
                         </View>
                         <View style={{ flex: 1, height: 2, backgroundColor: 'transparent' }}>
                             <Text style={{ textAlign: 'center', color: 'transparent' }}>---</Text>
                         </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
-                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
+                        <View style={{ flex: 1, height: 2, backgroundColor: 'transparent' }}>
+                            <Text style={{ textAlign: 'center', color: 'transparent' }}>---</Text>
                         </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
-                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
+                        <View style={{ flex: 1, height: 2, backgroundColor: '#2D8cF0' }}>
+                            <Text style={{ textAlign: 'center', color: '#2D8cF0' }}>---</Text>
                         </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
-                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
+                        <View style={{ flex: 1, height: 2, backgroundColor: '#2D8cF0' }}>
+                            <Text style={{ textAlign: 'center', color: '#2D8cF0' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: '#2D8cF0' }}>
+                            <Text style={{ textAlign: 'center', color: '#2D8cF0' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: 'transparent' }}>
+                            <Text style={{ textAlign: 'center', color: 'transparent' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: 'transparent' }}>
+                            <Text style={{ textAlign: 'center', color: 'transparent' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: '#2D8cF0' }}>
+                            <Text style={{ textAlign: 'center', color: '#2D8cF0' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: '#2D8cF0' }}>
+                            <Text style={{ textAlign: 'center', color: '#2D8cF0' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: '#2D8cF0' }}>
+                            <Text style={{ textAlign: 'center', color: '#2D8cF0' }}>---</Text>
                         </View>
                         <View style={{ flex: 1, height: 2, backgroundColor: 'transparent' }}>
                             <Text style={{ textAlign: 'center', color: 'transparent' }}>---</Text>
