@@ -22,6 +22,71 @@ export default () => {
                             borderLeftWidth: 2,
                             borderLeftColor: '#E4E4E4'
                         }}>
+                            {/* 照片 */}
+                            <View style={{
+                                marginBottom: 15
+                            }}>
+                                <View style={{
+                                    marginLeft: -6,
+                                    height: 10,
+                                    width: 10,
+                                    borderRadius: 10,
+                                    borderStyle: 'solid',
+                                    borderColor: '#F3C026',
+                                    borderWidth: 2,
+                                    backgroundColor: '#F5F5F5'
+                                }}></View>
+                                <View style={{
+                                    marginTop: -15,
+                                    marginLeft: 10,
+                                    marginBottom: 10
+                                }}>
+                                    <Text>7月22日</Text>
+                                </View>
+                                <View style={{
+                                    marginLeft: 10,
+                                    backgroundColor: '#fff',
+                                    flexDirection: 'row'
+                                }}>
+                                    <Image
+                                        source={{ uri: 'http://119.96.189.81:7788/ABoa/9992.jpg' }}
+                                        containerStyle={{
+                                            aspectRatio: 1,
+                                            // width: 120,
+                                            borderRadius: 10,
+                                            flex: 1,
+                                        }}
+                                        PlaceholderContent={<ActivityIndicator />}
+                                        onPress={() => {
+                                            // console.log('xxx', index)
+                                            // this.setState({
+                                            //     modalVisible: true,
+                                            //     index
+                                            // })
+                                        }}
+                                    />
+
+                                    <View style={{
+                                        flexDirection: 'row',
+                                        alignItems: 'center',
+                                        flex: 1,
+                                        marginTop: 5,
+                                        paddingLeft: 10,
+                                    }}>
+                                        <View>
+                                            <Text style={{
+                                                fontWeight: 'bold',
+                                                fontSize: 14,
+                                            }}>上传了一张照片</Text>
+                                            <Text style={{
+                                                marginTop: 5,
+                                                fontSize: 12,
+                                                color: '#8F8F8F'
+                                            }}>7月22日 15.30</Text>
+                                        </View>
+                                    </View>
+                                </View>
+                            </View>
                             {/* 身高体重 */}
                             <View style={{
                                 marginBottom: 15
