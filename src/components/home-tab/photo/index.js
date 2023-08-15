@@ -111,6 +111,8 @@ export default class Photo extends Component {
                     <Modal
                         visible={this.state.modalVisible}
                         transparent={true}
+                        animationType="slide"
+                        statusBarTranslucent={true}
                         onRequestClose={() => this.setState({ modalVisible: false })}
                     >
                         <ImageViewer
