@@ -1,13 +1,11 @@
 import React from 'react';
-import { Tab, Text, TabView } from '@rneui/themed';
+import { Tab, TabView } from '@rneui/themed';
 
 import Events from './events'
 import Growth from './growth'
 import Photo from './photo'
 
-export default ({index, setIndex}) => {
-    // const [index, setIndex] = React.useState(0);
-
+export default ({tabIndex, setTabIndex}) => {
     return (
         <>
             {/* <Tab
@@ -33,7 +31,7 @@ export default ({index, setIndex}) => {
                 />
             </Tab> */}
 
-            <TabView value={index} onChange={setIndex} animationType="spring">
+            <TabView value={tabIndex} onChange={setTabIndex} animationType="spring">
                 <TabView.Item style={{ backgroundColor: '', width: '100%' }}>
                     <Events />
                 </TabView.Item>

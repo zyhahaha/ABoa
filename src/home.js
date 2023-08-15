@@ -1,5 +1,5 @@
 import React from 'react';
-import { navigate } from './libs/RootNavigation'; // 这个是封装的一个工具，用来进行在js代码中的跳转的
+// import { navigate } from './libs/RootNavigation'; // 这个是封装的一个工具，用来进行在js代码中的跳转的
 
 import Feed from './components/feed'
 import HomeTab from './components/home-tab'
@@ -9,8 +9,8 @@ export default function BottomTabScreen() {
 
     return (
         <>
-            <Feed index={{index, setIndex}} />
-            <HomeTab index={{index, setIndex}} />
+            <Feed tabIndex={index} setTabIndex={setIndex} />
+            <HomeTab tabIndex={index} setTabIndex={setIndex} />
         </>
 
         // <Button title='Welcome' />

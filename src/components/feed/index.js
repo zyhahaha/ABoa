@@ -81,29 +81,14 @@ export default class Photo extends Component {
                         <View style={{ flex: 1, height: 2, backgroundColor: 'transparent' }}>
                             <Text style={{ textAlign: 'center', color: 'transparent' }}>---</Text>
                         </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: '#2D8cF0' }}>
-                            <Text style={{ textAlign: 'center', color: '#2D8cF0' }}>---</Text>
+                        <View style={{ flex: 1, height: 2, backgroundColor: this.props.tabIndex === 0 ? '#2D8cF0' : 'transparent' }}>
+                            <Text style={{ textAlign: 'center', color: this.props.tabIndex === 0 ? '#2D8cF0' : 'transparent' }}>---</Text>
                         </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: '#2D8cF0' }}>
-                            <Text style={{ textAlign: 'center', color: '#2D8cF0' }}>---</Text>
+                        <View style={{ flex: 1, height: 2, backgroundColor: this.props.tabIndex === 0 ? '#2D8cF0' : 'transparent' }}>
+                            <Text style={{ textAlign: 'center', color: this.props.tabIndex === 0 ? '#2D8cF0' : 'transparent' }}>---</Text>
                         </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: '#2D8cF0' }}>
-                            <Text style={{ textAlign: 'center', color: '#2D8cF0' }}>---</Text>
-                        </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: 'transparent' }}>
-                            <Text style={{ textAlign: 'center', color: 'transparent' }}>---</Text>
-                        </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: 'transparent' }}>
-                            <Text style={{ textAlign: 'center', color: 'transparent' }}>---</Text>
-                        </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: '#2D8cF0' }}>
-                            <Text style={{ textAlign: 'center', color: '#2D8cF0' }}>---</Text>
-                        </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: '#2D8cF0' }}>
-                            <Text style={{ textAlign: 'center', color: '#2D8cF0' }}>---</Text>
-                        </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: '#2D8cF0' }}>
-                            <Text style={{ textAlign: 'center', color: '#2D8cF0' }}>---</Text>
+                        <View style={{ flex: 1, height: 2, backgroundColor: this.props.tabIndex === 0 ? '#2D8cF0' : 'transparent' }}>
+                            <Text style={{ textAlign: 'center', color: this.props.tabIndex === 0 ? '#2D8cF0' : 'transparent' }}>---</Text>
                         </View>
                         <View style={{ flex: 1, height: 2, backgroundColor: 'transparent' }}>
                             <Text style={{ textAlign: 'center', color: 'transparent' }}>---</Text>
@@ -111,14 +96,29 @@ export default class Photo extends Component {
                         <View style={{ flex: 1, height: 2, backgroundColor: 'transparent' }}>
                             <Text style={{ textAlign: 'center', color: 'transparent' }}>---</Text>
                         </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: '#2D8cF0' }}>
-                            <Text style={{ textAlign: 'center', color: '#2D8cF0' }}>---</Text>
+                        <View style={{ flex: 1, height: 2, backgroundColor: this.props.tabIndex === 1 ? '#2D8cF0' : 'transparent' }}>
+                            <Text style={{ textAlign: 'center', color: this.props.tabIndex === 1 ? '#2D8cF0' : 'transparent' }}>---</Text>
                         </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: '#2D8cF0' }}>
-                            <Text style={{ textAlign: 'center', color: '#2D8cF0' }}>---</Text>
+                        <View style={{ flex: 1, height: 2, backgroundColor: this.props.tabIndex === 1 ? '#2D8cF0' : 'transparent' }}>
+                            <Text style={{ textAlign: 'center', color: this.props.tabIndex === 1 ? '#2D8cF0' : 'transparent' }}>---</Text>
                         </View>
-                        <View style={{ flex: 1, height: 2, backgroundColor: '#2D8cF0' }}>
-                            <Text style={{ textAlign: 'center', color: '#2D8cF0' }}>---</Text>
+                        <View style={{ flex: 1, height: 2, backgroundColor: this.props.tabIndex === 1 ? '#2D8cF0' : 'transparent' }}>
+                            <Text style={{ textAlign: 'center', color: this.props.tabIndex === 1 ? '#2D8cF0' : 'transparent' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: 'transparent' }}>
+                            <Text style={{ textAlign: 'center', color: 'transparent' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: 'transparent' }}>
+                            <Text style={{ textAlign: 'center', color: 'transparent' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: this.props.tabIndex === 2 ? '#2D8cF0' : 'transparent' }}>
+                            <Text style={{ textAlign: 'center', color: this.props.tabIndex === 2 ? '#2D8cF0' : 'transparent' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: this.props.tabIndex === 2 ? '#2D8cF0' : 'transparent' }}>
+                            <Text style={{ textAlign: 'center', color: this.props.tabIndex === 2 ? '#2D8cF0' : 'transparent' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: this.props.tabIndex === 2 ? '#2D8cF0' : 'transparent' }}>
+                            <Text style={{ textAlign: 'center', color: this.props.tabIndex === 2 ? '#2D8cF0' : 'transparent' }}>---</Text>
                         </View>
                         <View style={{ flex: 1, height: 2, backgroundColor: 'transparent' }}>
                             <Text style={{ textAlign: 'center', color: 'transparent' }}>---</Text>
