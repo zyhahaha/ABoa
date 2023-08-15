@@ -21,6 +21,7 @@ export default () => {
                             borderLeftWidth: 2,
                             borderLeftColor: '#E4E4E4'
                         }}>
+                            {/* 身高体重 */}
                             <View style={{
                                 marginBottom: 15
                             }}>
@@ -59,7 +60,7 @@ export default () => {
                                     }}>6月17日 15.00</Text>
                                 </View>
                             </View>
-
+                            {/* 身高体重 */}
                             <View style={{
                                 marginBottom: 15
                             }}>
@@ -98,7 +99,7 @@ export default () => {
                                     }}>4月29日 15.03</Text>
                                 </View>
                             </View>
-
+                            {/* 身高体重 */}
                             <View style={{
                                 marginBottom: 15
                             }}>
@@ -138,7 +139,7 @@ export default () => {
                                 </View>
                             </View>
                         </View>
-                   </View>
+                    </View>
                 </ScrollView>
             </SafeAreaView>
         </>
