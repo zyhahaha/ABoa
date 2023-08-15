@@ -5,25 +5,34 @@ import { FlatList, SafeAreaView, View, Modal, StyleSheet, ActivityIndicator } fr
 // import { Text, Card } from '@rneui/themed';
 import ImageViewer from 'react-native-image-zoom-viewer';
 
-const images = [{
-    // Simplest usage.
-    url: 'https://avatars2.githubusercontent.com/u/7970947?v=3&s=460',
+// const images = [{
+//     // Simplest usage.
+//     url: 'https://avatars2.githubusercontent.com/u/7970947?v=3&s=460',
 
-    // width: number
-    // height: number
-    // Optional, if you know the image size, you can set the optimization performance
+//     // width: number
+//     // height: number
+//     // Optional, if you know the image size, you can set the optimization performance
 
-    // You can pass props to <Image />.
-    props: {
-        // headers: ...
+//     // You can pass props to <Image />.
+//     props: {
+//         // headers: ...
+//     }
+// }, {
+//     url: '',
+//     props: {
+//         // Or you can set source directory.
+//         source: require('../../../../assets/splash.png')
+//     }
+// }]
+const images = [
+    {
+        url: 'https://ts1.cn.mm.bing.net/th/id/R-C.b61e85948514dde6c8f2997871c60766?rik=WSmrFRL1fzIM2A&riu=http%3a%2f%2fpic1.bbzhi.com%2ffengjingbizhi%2fdiqiuguibaodachicunziranfengjingbizhijingxuandiyiji%2fnature_2008_landscape_1680_desktop_01_20183_11.jpg&ehk=UHw5ouJjdlJ4utvTAdWd8UZTuIpkI%2fMSeyoP%2fjtTbpQ%3d&risl=&pid=ImgRaw&r=0'
+    }, {
+        url: 'https://tse3-mm.cn.bing.net/th/id/OIP-C.g9UbVfyVZX-SfD09JcYr5QHaEK?pid=ImgDet&rs=1'
+    }, {
+        url: 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g1/M0B/03/06/ChMljl402K6IOTZbAARWayFg6S4AAQJPwFhuRIABFaD752.jpg'
     }
-}, {
-    url: '',
-    props: {
-        // Or you can set source directory.
-        source: require('../../../../assets/splash.png')
-    }
-}]
+]
 
 const styles = StyleSheet.create({
     list: {
@@ -53,23 +62,26 @@ export default class Photo extends Component {
                 {/* <View style={{ height: 20 }}></View> */}
                 <SafeAreaView>
                     <FlatList
-                        data={[
-                            'https://ts1.cn.mm.bing.net/th/id/R-C.b61e85948514dde6c8f2997871c60766?rik=WSmrFRL1fzIM2A&riu=http%3a%2f%2fpic1.bbzhi.com%2ffengjingbizhi%2fdiqiuguibaodachicunziranfengjingbizhijingxuandiyiji%2fnature_2008_landscape_1680_desktop_01_20183_11.jpg&ehk=UHw5ouJjdlJ4utvTAdWd8UZTuIpkI%2fMSeyoP%2fjtTbpQ%3d&risl=&pid=ImgRaw&r=0',
-                            'https://tse3-mm.cn.bing.net/th/id/OIP-C.g9UbVfyVZX-SfD09JcYr5QHaEK?pid=ImgDet&rs=1',
-                            'https://desk-fd.zol-img.com.cn/t_s960x600c5/g1/M0B/03/06/ChMljl402K6IOTZbAARWayFg6S4AAQJPwFhuRIABFaD752.jpg'
-                        ]}
+                        data={images}
                         style={styles.list}
                         numColumns={2}
                         keyExtractor={(e) => e}
-                        renderItem={({ item }) => (
+                        renderItem={({ item, index }) => (
                             // <View style={{
                             //     padding: 20
                             // }}></View>
                             <Image
-                                    source={{ uri: item }}
-                                    containerStyle={styles.item}
-                                    PlaceholderContent={<ActivityIndicator />}
-                                />
+                                source={{ uri: item.url }}
+                                containerStyle={styles.item}
+                                PlaceholderContent={<ActivityIndicator />}
+                                onPress={() => {
+                                    // console.log('xxx', index)
+                                    this.setState({
+                                        modalVisible: true,
+                                        index
+                                    })
+                                }}
+                            />
                         )}
                     />
                 </SafeAreaView>
@@ -88,10 +100,12 @@ export default class Photo extends Component {
                             imageUrls={images}
                             index={this.state.index}
                             onSwipeDown={() => {
-                                console.log('onSwipeDown');
+                                // console.log('onSwipeDown');
                                 () => this.setState({ modalVisible: false })
                             }}
-                            onMove={data => console.log(data)}
+                            onClick={() => {
+                                this.setState({ modalVisible: false })
+                            }}
                             enableSwipeDown={true}
                         />
                     </Modal>
