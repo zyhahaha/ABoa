@@ -22,6 +22,42 @@ export default () => {
                             borderLeftWidth: 2,
                             borderLeftColor: '#E4E4E4'
                         }}>
+                            {/* 每日 */}
+                            <View style={{
+                                marginBottom: 15
+                            }}>
+                                <View style={{
+                                    marginLeft: -6,
+                                    height: 10,
+                                    width: 10,
+                                    borderRadius: 10,
+                                    borderStyle: 'solid',
+                                    borderColor: '#F3C026',
+                                    borderWidth: 2,
+                                    backgroundColor: '#F5F5F5'
+                                }}></View>
+                                <View style={{
+                                    marginTop: -15,
+                                    marginLeft: 10,
+                                    marginBottom: 10
+                                }}>
+                                    <Text>8月15日</Text>
+                                </View>
+                                <View style={{
+                                    marginLeft: 10,
+                                    padding: 10,
+                                    backgroundColor: '#fff'
+                                }}>
+                                    <Text style={{
+                                        fontSize: 14
+                                    }}>小福今天4个月28天了</Text>
+                                    <Text style={{
+                                        marginTop: 5,
+                                        fontSize: 12,
+                                        color: '#8F8F8F'
+                                    }}>8月15日 8:00</Text>
+                                </View>
+                            </View>
                             {/* 照片 */}
                             <View style={{
                                 marginBottom: 15
@@ -82,7 +118,7 @@ export default () => {
                                                 marginTop: 5,
                                                 fontSize: 12,
                                                 color: '#8F8F8F'
-                                            }}>7月22日 15.30</Text>
+                                            }}>7月22日 15:30</Text>
                                         </View>
                                     </View>
                                 </View>
@@ -123,7 +159,7 @@ export default () => {
                                         marginTop: 5,
                                         fontSize: 12,
                                         color: '#8F8F8F'
-                                    }}>6月17日 15.00</Text>
+                                    }}>6月17日 15:00</Text>
                                 </View>
                             </View>
                             {/* 照片 */}
@@ -186,7 +222,7 @@ export default () => {
                                                 marginTop: 5,
                                                 fontSize: 12,
                                                 color: '#8F8F8F'
-                                            }}>6月16日 15.00</Text>
+                                            }}>6月16日 15:00</Text>
                                         </View>
                                     </View>
                                 </View>
@@ -227,7 +263,7 @@ export default () => {
                                         marginTop: 5,
                                         fontSize: 12,
                                         color: '#8F8F8F'
-                                    }}>4月29日 15.03</Text>
+                                    }}>4月29日 15:03</Text>
                                 </View>
                             </View>
                             {/* 身高体重 */}
@@ -266,7 +302,7 @@ export default () => {
                                         marginTop: 5,
                                         fontSize: 12,
                                         color: '#8F8F8F'
-                                    }}>3月17日 16.00</Text>
+                                    }}>3月17日 16:00</Text>
                                 </View>
                             </View>
                         </View>
