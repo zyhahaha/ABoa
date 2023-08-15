@@ -62,7 +62,7 @@ export default class Photo extends Component {
 
                     <View style={{
                         position: 'absolute',
-                        bottom: 0,
+                        bottom: 2,
                         left: 0,
                         flexDirection: 'row'
                     }}>
@@ -79,9 +79,24 @@ export default class Photo extends Component {
                             height: 25,
                         }}><Text style={{ textAlign: 'center', color: '#fff' }}>相册</Text></View>
                     </View>
+
+                    <View style={{
+                        position: 'absolute',
+                        bottom: 0,
+                        left: 0,
+                        flexDirection: 'row'
+                    }}>
+                        <View style={{ felx: 1, height: 2, backgroundColor: '#ccc' }}>
+                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
+                        </View>
+                        <View style={{ felx: 1, height: 2, backgroundColor: '#ccc' }}>
+                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
+                        </View>
+                        <View style={{ felx: 1, height: 2, backgroundColor: '#ccc' }}>
+                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
+                        </View>
+                    </View>
                 </View>
-
-
             </>
         )
     }
