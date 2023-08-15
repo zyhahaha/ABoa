@@ -12,14 +12,11 @@ export default () => {
             <SafeAreaView>
                 <ScrollView>
                     <View style={{
-                        // height: 'auto',
-                        marginBottom: 50,
                         paddingTop: 10,
                         paddingLeft: 10,
                         backgroundColor: '#F5F5F5'
                     }}>
                         <View style={{
-                            height: 300,
                             borderStyle: 'solid',
                             borderLeftWidth: 2,
                             borderLeftColor: '#E4E4E4'
