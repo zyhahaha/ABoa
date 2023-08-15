@@ -22,7 +22,7 @@ export default () => {
                             borderLeftWidth: 2,
                             borderLeftColor: '#E4E4E4'
                         }}>
-                            {/* 照片 */}
+                            {/* 身高体重 */}
                             <View style={{
                                 marginBottom: 15
                             }}>
@@ -42,6 +42,45 @@ export default () => {
                                     marginBottom: 10
                                 }}>
                                     <Text>6月17日</Text>
+                                </View>
+                                <View style={{
+                                    marginLeft: 10,
+                                    padding: 10,
+                                    backgroundColor: '#fff'
+                                }}>
+                                    <Text style={{
+                                        fontSize: 14
+                                    }}>身高  60 cm</Text>
+                                    <Text style={{
+                                        fontSize: 14
+                                    }}>体重  5.6 kg</Text>
+                                    <Text style={{
+                                        marginTop: 5,
+                                        fontSize: 12,
+                                        color: '#8F8F8F'
+                                    }}>6月17日 15.00</Text>
+                                </View>
+                            </View>
+                            {/* 照片 */}
+                            <View style={{
+                                marginBottom: 15
+                            }}>
+                                <View style={{
+                                    marginLeft: -6,
+                                    height: 10,
+                                    width: 10,
+                                    borderRadius: 10,
+                                    borderStyle: 'solid',
+                                    borderColor: '#F3C026',
+                                    borderWidth: 2,
+                                    backgroundColor: '#F5F5F5'
+                                }}></View>
+                                <View style={{
+                                    marginTop: -15,
+                                    marginLeft: 10,
+                                    marginBottom: 10
+                                }}>
+                                    <Text>6月16日</Text>
                                 </View>
                                 <View style={{
                                     marginLeft: 10,
@@ -82,48 +121,9 @@ export default () => {
                                                 marginTop: 5,
                                                 fontSize: 12,
                                                 color: '#8F8F8F'
-                                            }}>6月17日 15.00</Text>
+                                            }}>6月16日 15.00</Text>
                                         </View>
                                     </View>
-                                </View>
-                            </View>
-                            {/* 身高体重 */}
-                            <View style={{
-                                marginBottom: 15
-                            }}>
-                                <View style={{
-                                    marginLeft: -6,
-                                    height: 10,
-                                    width: 10,
-                                    borderRadius: 10,
-                                    borderStyle: 'solid',
-                                    borderColor: '#F3C026',
-                                    borderWidth: 2,
-                                    backgroundColor: '#F5F5F5'
-                                }}></View>
-                                <View style={{
-                                    marginTop: -15,
-                                    marginLeft: 10,
-                                    marginBottom: 10
-                                }}>
-                                    <Text>6月17日</Text>
-                                </View>
-                                <View style={{
-                                    marginLeft: 10,
-                                    padding: 10,
-                                    backgroundColor: '#fff'
-                                }}>
-                                    <Text style={{
-                                        fontSize: 14
-                                    }}>身高  60 cm</Text>
-                                    <Text style={{
-                                        fontSize: 14
-                                    }}>体重  5.6 kg</Text>
-                                    <Text style={{
-                                        marginTop: 5,
-                                        fontSize: 12,
-                                        color: '#8F8F8F'
-                                    }}>6月17日 15.00</Text>
                                 </View>
                             </View>
                             {/* 身高体重 */}
