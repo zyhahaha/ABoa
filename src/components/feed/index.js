@@ -16,7 +16,7 @@ export default class Photo extends Component {
                     height: 200
                 }}>
                     <Image
-                        source={{ uri: 'https://awildgeographer.files.wordpress.com/2015/02/john_muir_glacier.jpg' }}
+                        source={{ uri: 'http://119.96.189.81:7788/ABoa/9993.jpg' }}
                         containerStyle={{
                             width: '100%',
                             flex: 1,
@@ -30,7 +30,7 @@ export default class Photo extends Component {
                         left: 30,
                     }}>
                         <Image
-                            source={{ uri: 'https://miniapp.gtimg.cn/public/appicon/0e72cbdeae235360067c453edb17b6c0_200.jpg' }}
+                            source={{ uri: 'http://119.96.189.81:7788/ABoa/9995.jpg' }}
                             containerStyle={{
                                 width: 50,
                                 height: 50,

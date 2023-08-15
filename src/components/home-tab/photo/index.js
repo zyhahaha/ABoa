@@ -25,14 +25,31 @@ import ImageViewer from 'react-native-image-zoom-viewer';
 //     }
 // }]
 const images = [
-    {
-        url: 'https://ts1.cn.mm.bing.net/th/id/R-C.b61e85948514dde6c8f2997871c60766?rik=WSmrFRL1fzIM2A&riu=http%3a%2f%2fpic1.bbzhi.com%2ffengjingbizhi%2fdiqiuguibaodachicunziranfengjingbizhijingxuandiyiji%2fnature_2008_landscape_1680_desktop_01_20183_11.jpg&ehk=UHw5ouJjdlJ4utvTAdWd8UZTuIpkI%2fMSeyoP%2fjtTbpQ%3d&risl=&pid=ImgRaw&r=0'
-    }, {
-        url: 'https://tse3-mm.cn.bing.net/th/id/OIP-C.g9UbVfyVZX-SfD09JcYr5QHaEK?pid=ImgDet&rs=1'
-    }, {
-        url: 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g1/M0B/03/06/ChMljl402K6IOTZbAARWayFg6S4AAQJPwFhuRIABFaD752.jpg'
-    }
-]
+    { url: 'http://119.96.189.81:7788/ABoa/111.jpg' },
+    { url: 'http://119.96.189.81:7788/ABoa/222.jpg' },
+    { url: 'http://119.96.189.81:7788/ABoa/333.jpg' },
+    { url: 'http://119.96.189.81:7788/ABoa/444.jpg' },
+    { url: 'http://119.96.189.81:7788/ABoa/555.jpg' },
+    { url: 'http://119.96.189.81:7788/ABoa/666.jpg' },
+    { url: 'http://119.96.189.81:7788/ABoa/777.jpg' },
+    { url: 'http://119.96.189.81:7788/ABoa/888.jpg' },
+    { url: 'http://119.96.189.81:7788/ABoa/999.jpg' },
+    { url: 'http://119.96.189.81:7788/ABoa/9990.jpg' },
+    { url: 'http://119.96.189.81:7788/ABoa/9991.jpg' },
+    { url: 'http://119.96.189.81:7788/ABoa/9992.jpg' },
+    { url: 'http://119.96.189.81:7788/ABoa/9993.jpg' },
+    { url: 'http://119.96.189.81:7788/ABoa/9994.jpg' },
+    { url: 'http://119.96.189.81:7788/ABoa/9995.jpg' },
+    // { url: 'http://119.96.189.81:7788/ABoa/v2.mp4' },
+    // { url: 'http://119.96.189.81:7788/ABoa/v3.mp4' }
+    // {
+    //     url: 'https://ts1.cn.mm.bing.net/th/id/R-C.b61e85948514dde6c8f2997871c60766?rik=WSmrFRL1fzIM2A&riu=http%3a%2f%2fpic1.bbzhi.com%2ffengjingbizhi%2fdiqiuguibaodachicunziranfengjingbizhijingxuandiyiji%2fnature_2008_landscape_1680_desktop_01_20183_11.jpg&ehk=UHw5ouJjdlJ4utvTAdWd8UZTuIpkI%2fMSeyoP%2fjtTbpQ%3d&risl=&pid=ImgRaw&r=0'
+    // }, {
+    //     url: 'https://tse3-mm.cn.bing.net/th/id/OIP-C.g9UbVfyVZX-SfD09JcYr5QHaEK?pid=ImgDet&rs=1'
+    // }, {
+    //     url: 'https://desk-fd.zol-img.com.cn/t_s960x600c5/g1/M0B/03/06/ChMljl402K6IOTZbAARWayFg6S4AAQJPwFhuRIABFaD752.jpg'
+    // }
+].reverse()
 
 const styles = StyleSheet.create({
     list: {
