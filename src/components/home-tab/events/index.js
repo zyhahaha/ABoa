@@ -1,13 +1,18 @@
 import React from 'react';
 import {
+    Modal,
     SafeAreaView, ScrollView,
     StyleSheet,
     View,
     ActivityIndicator
 } from 'react-native';
 import { Text, Image } from '@rneui/themed';
+import ImageViewer from 'react-native-image-zoom-viewer';
 
 export default () => {
+    const [imagesUrl, setImagesUrl] = React.useState([]);
+    const [imageIndex, setImageIndex] = React.useState(0);
+    const [modalVisible, setModalVisible] = React.useState(false);
     return (
         <>
             <SafeAreaView>
@@ -94,11 +99,8 @@ export default () => {
                                         }}
                                         PlaceholderContent={<ActivityIndicator />}
                                         onPress={() => {
-                                            // console.log('xxx', index)
-                                            // this.setState({
-                                            //     modalVisible: true,
-                                            //     index
-                                            // })
+                                            setImagesUrl([{url: 'http://119.96.189.81:7788/ABoa/9992.jpg'}])
+                                            setModalVisible(true)
                                         }}
                                     />
 
@@ -198,11 +200,8 @@ export default () => {
                                         }}
                                         PlaceholderContent={<ActivityIndicator />}
                                         onPress={() => {
-                                            // console.log('xxx', index)
-                                            // this.setState({
-                                            //     modalVisible: true,
-                                            //     index
-                                            // })
+                                            setImagesUrl([{ url: 'http://119.96.189.81:7788/ABoa/999.jpg' }])
+                                            setModalVisible(true)
                                         }}
                                     />
 
@@ -309,6 +308,32 @@ export default () => {
                     </View>
                 </ScrollView>
             </SafeAreaView>
+
+            <View
+                style={{
+                    padding: 10
+                }}
+            >
+                <Modal
+                    visible={modalVisible}
+                    transparent={true}
+                    animationType="slide"
+                    statusBarTranslucent={true}
+                    onRequestClose={() => setModalVisible(false)}
+                >
+                    <ImageViewer
+                        imageUrls={imagesUrl}
+                        index={imageIndex}
+                        onSwipeDown={() => {
+                            () => setModalVisible(false)
+                        }}
+                        onClick={() => {
+                            setModalVisible(false)
+                        }}
+                        enableSwipeDown={true}
+                    />
+                </Modal>
+            </View>
         </>
     );
 };
