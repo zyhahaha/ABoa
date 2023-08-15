@@ -86,14 +86,50 @@ export default class Photo extends Component {
                         left: 0,
                         flexDirection: 'row'
                     }}>
-                        <View style={{ felx: 1, height: 2, backgroundColor: '#ccc' }}>
+                        <View style={{ flex: 1, height: 2, backgroundColor: 'transparent' }}>
+                            <Text style={{ textAlign: 'center', color: 'transparent' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
                             <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
                         </View>
-                        <View style={{ felx: 1, height: 2, backgroundColor: '#ccc' }}>
+                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
                             <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
                         </View>
-                        <View style={{ felx: 1, height: 2, backgroundColor: '#ccc' }}>
+                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
                             <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: 'transparent' }}>
+                            <Text style={{ textAlign: 'center', color: 'transparent' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
+                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
+                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
+                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
+                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
+                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: 'transparent' }}>
+                            <Text style={{ textAlign: 'center', color: 'transparent' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
+                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
+                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: '#ccc' }}>
+                            <Text style={{ textAlign: 'center', color: '#ccc' }}>---</Text>
+                        </View>
+                        <View style={{ flex: 1, height: 2, backgroundColor: 'transparent' }}>
+                            <Text style={{ textAlign: 'center', color: 'transparent' }}>---</Text>
                         </View>
                     </View>
                 </View>
