@@ -7,7 +7,6 @@ export default class Photo extends Component {
         super(props);
     }
 
-
     render() {
         return (
             <>
@@ -25,6 +24,7 @@ export default class Photo extends Component {
                     />
 
                     <View style={{
+                        opacity: this.props.tabIndex === 1 ? 0 : 1,
                         position: 'absolute',
                         bottom: 50,
                         left: 30,
@@ -40,6 +40,7 @@ export default class Photo extends Component {
                         />
                     </View>
                     <View style={{
+                        opacity: this.props.tabIndex === 1 ? 0 : 1,
                         position: 'absolute',
                         bottom: 58,
                         left: 90,
@@ -53,6 +54,7 @@ export default class Photo extends Component {
                     </View>
 
                     <View style={{
+                        // opacity: this.props.tabIndex === 1 ? 0 : 1,
                         position: 'absolute',
                         bottom: 2,
                         left: 0,
@@ -73,6 +75,7 @@ export default class Photo extends Component {
                     </View>
 
                     <View style={{
+                        // opacity: this.props.tabIndex === 1 ? 0 : 1,
                         position: 'absolute',
                         bottom: 0,
                         left: 0,
