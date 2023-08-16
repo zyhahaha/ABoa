@@ -96,7 +96,7 @@ export default class Photo extends Component {
                         <View style={{
                             flex: 1,
                             height: 25,
-                        }}><Text style={{ textAlign: 'center', color: '#fff' }}>成长记录</Text></View>
+                        }}><Text style={{ textAlign: 'center', color: '#fff' }}>疫苗接种</Text></View>
                     </View>
 
                     <View style={{

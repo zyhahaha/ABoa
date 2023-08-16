@@ -2,7 +2,7 @@ import React from 'react';
 import { Tab, TabView } from '@rneui/themed';
 
 import Events from './events'
-import Growth from './growth'
+import Vaccine from './vaccine'
 import Photo from './photo'
 
 export default ({tabIndex, setTabIndex}) => {
@@ -39,7 +39,7 @@ export default ({tabIndex, setTabIndex}) => {
                     <Photo />
                 </TabView.Item>
                 <TabView.Item style={{ backgroundColor: '', width: '100%' }}>
-                    {/* <Growth /> */}
+                    <Vaccine />
                 </TabView.Item>
             </TabView>
         </>
