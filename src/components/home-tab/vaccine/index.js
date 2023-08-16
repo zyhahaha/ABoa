@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import { Text, Image, SearchBar } from '@rneui/themed';
 import ImageViewer from 'react-native-image-zoom-viewer';
+import medicineList from './medicine.js'
 
 export default () => {
     const [imagesUrl, setImagesUrl] = React.useState([]);
@@ -18,11 +19,13 @@ export default () => {
     const nowDate = (new Date()).getDate()
 
     const [search, setSearch] = React.useState("");
-    const [resultList, setResultList] = React.useState([{name: '非布司他', type: '增加药物剂量'}, {name: '非布司他', type: '增加药物剂量'}]);
+    const [resultList, setResultList] = React.useState([]);
 
     const updateSearch = (search) => {
-        // console.log(search)
         setSearch(search);
+        
+        const resultList = medicineList.filter(v => v.name.includes(search))
+        setResultList(resultList)
     };
     return (
         <>
