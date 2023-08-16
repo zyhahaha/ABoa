@@ -8,11 +8,15 @@ import {
 } from 'react-native';
 import { Text, Image } from '@rneui/themed';
 import ImageViewer from 'react-native-image-zoom-viewer';
+import computeCountDays from './utils/compute.js'
 
 export default () => {
     const [imagesUrl, setImagesUrl] = React.useState([]);
     const [imageIndex, setImageIndex] = React.useState(0);
     const [modalVisible, setModalVisible] = React.useState(false);
+
+    const nowMonth = (new Date()).getMonth() + 1
+    const nowDate = (new Date()).getDate()
     return (
         <>
             <SafeAreaView>
@@ -46,7 +50,7 @@ export default () => {
                                     marginLeft: 10,
                                     marginBottom: 10
                                 }}>
-                                    <Text>8月15日</Text>
+                                    <Text>{nowMonth}月{nowDate}日</Text>
                                 </View>
                                 <View style={{
                                     marginLeft: 10,
@@ -55,12 +59,12 @@ export default () => {
                                 }}>
                                     <Text style={{
                                         fontSize: 14
-                                    }}>小福今天4个月28天了</Text>
+                                    }}>小福今天{computeCountDays(Date.parse('2023-03-17')).days}天了</Text>
                                     <Text style={{
                                         marginTop: 5,
                                         fontSize: 12,
                                         color: '#8F8F8F'
-                                    }}>8月15日 8:00</Text>
+                                    }}>{nowMonth}月{nowDate}日 8:00</Text>
                                 </View>
                             </View>
                             {/* 照片 */}
