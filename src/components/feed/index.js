@@ -85,15 +85,15 @@ export default class Photo extends Component {
                         zIndex: 2,
                         flexDirection: 'row'
                     }}>
-                        <View style={{
+                        <View onStartShouldSetResponder={() => this.props.setTabIndex(0)} style={{
                             flex: 1,
                             height: 25,
                         }}><Text style={{ textAlign: 'center', color: '#fff' }}>首页</Text></View>
-                        <View style={{
+                        <View onStartShouldSetResponder={() => this.props.setTabIndex(1)} style={{
                             flex: 1,
                             height: 25,
                         }}><Text style={{ textAlign: 'center', color: '#fff' }}>相册</Text></View>
-                        <View style={{
+                        <View onStartShouldSetResponder={() => this.props.setTabIndex(2)} style={{
                             flex: 1,
                             height: 25,
                         }}><Text style={{ textAlign: 'center', color: '#fff' }}>疫苗接种</Text></View>
