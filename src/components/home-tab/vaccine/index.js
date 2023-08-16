@@ -9,6 +9,7 @@ import {
 import { Text, Image, SearchBar } from '@rneui/themed';
 import ImageViewer from 'react-native-image-zoom-viewer';
 import medicineList from './data/medicine.js'
+import recordList from './data/record.js'
 
 export default () => {
     const [imagesUrl, setImagesUrl] = React.useState([]);
@@ -98,41 +99,47 @@ export default () => {
                                     borderLeftColor: '#E4E4E4'
                                 }}>
                                     {/* 疫苗列表 */}
-                                    <View style={{
-                                        marginBottom: 15
-                                    }}>
-                                        <View style={{
-                                            marginLeft: -6,
-                                            height: 10,
-                                            width: 10,
-                                            borderRadius: 10,
-                                            borderStyle: 'solid',
-                                            borderColor: '#F3C026',
-                                            borderWidth: 2,
-                                            backgroundColor: '#F5F5F5'
-                                        }}></View>
-                                        <View style={{
-                                            marginTop: -15,
-                                            marginLeft: 10,
-                                            marginBottom: 10
-                                        }}>
-                                            <Text>3月17日</Text>
-                                        </View>
-                                        <View style={{
-                                            marginLeft: 10,
-                                            padding: 10,
-                                            backgroundColor: '#fff'
-                                        }}>
-                                            <Text style={{
-                                                fontSize: 14
-                                            }}>乙肝疫苗（第一针）</Text>
-                                            <Text style={{
-                                                marginTop: 5,
-                                                fontSize: 12,
-                                                color: '#8F8F8F'
-                                            }}>已接种</Text>
-                                        </View>
-                                    </View>
+                                    {
+                                        recordList.map(recordItem => {
+                                            return (
+                                                <View style={{
+                                                    marginBottom: 15
+                                                }}>
+                                                    <View style={{
+                                                        marginLeft: -6,
+                                                        height: 10,
+                                                        width: 10,
+                                                        borderRadius: 10,
+                                                        borderStyle: 'solid',
+                                                        borderColor: '#F3C026',
+                                                        borderWidth: 2,
+                                                        backgroundColor: '#F5F5F5'
+                                                    }}></View>
+                                                    <View style={{
+                                                        marginTop: -15,
+                                                        marginLeft: 10,
+                                                        marginBottom: 10
+                                                    }}>
+                                                        <Text>{recordItem.date}</Text>
+                                                    </View>
+                                                    <View style={{
+                                                        marginLeft: 10,
+                                                        padding: 10,
+                                                        backgroundColor: '#fff'
+                                                    }}>
+                                                        <Text style={{
+                                                            fontSize: 14
+                                                        }}>{recordItem.name}</Text>
+                                                        <Text style={{
+                                                            marginTop: 5,
+                                                            fontSize: 12,
+                                                            color: '#8F8F8F'
+                                                        }}>{recordItem.type}</Text>
+                                                    </View>
+                                                </View>
+                                            )
+                                        })
+                                    }
                                 </View>
                             </View>
                         )
