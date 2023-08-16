@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import { Text, Image, SearchBar } from '@rneui/themed';
 import ImageViewer from 'react-native-image-zoom-viewer';
-import medicineList from './medicine.js'
+import medicineList from './data/medicine.js'
 
 export default () => {
     const [imagesUrl, setImagesUrl] = React.useState([]);
@@ -116,7 +116,7 @@ export default () => {
                                             marginLeft: 10,
                                             marginBottom: 10
                                         }}>
-                                            <Text>{nowMonth}月{nowDate}日</Text>
+                                            <Text>3月17日</Text>
                                         </View>
                                         <View style={{
                                             marginLeft: 10,
@@ -125,12 +125,12 @@ export default () => {
                                         }}>
                                             <Text style={{
                                                 fontSize: 14
-                                            }}>aaa</Text>
+                                            }}>乙肝疫苗（第一针）</Text>
                                             <Text style={{
                                                 marginTop: 5,
                                                 fontSize: 12,
                                                 color: '#8F8F8F'
-                                            }}>{nowMonth}月{nowDate}日 8:00</Text>
+                                            }}>已接种</Text>
                                         </View>
                                     </View>
                                 </View>
