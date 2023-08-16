@@ -20,6 +20,7 @@ export default () => {
     const [search, setSearch] = React.useState("");
 
     const updateSearch = (search) => {
+        // console.log(search)
         setSearch(search);
     };
     return (
@@ -27,11 +28,10 @@ export default () => {
             <SafeAreaView>
                 <ScrollView>
                     <View style={{
-                        margin: 10
                     }}>
                         <SearchBar
-                            platform="android"
-                            placeholder="Type Here..."
+                            platform="ios"
+                            placeholder="输入药品名"
                             onChangeText={updateSearch}
                             value={search}
                         />
