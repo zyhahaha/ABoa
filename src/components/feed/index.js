@@ -14,6 +14,16 @@ export default class Photo extends Component {
                     position: 'relative',
                     height: 200
                 }}>
+                    <View style={{
+                        height: 200,
+                        width: '100%',
+                        backgroundColor: '#00000033',
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        zIndex: 1
+                    }}></View>
+
                     <Image
                         source={{ uri: 'http://119.96.189.81:7788/ABoa/9993.jpg' }}
                         containerStyle={{
@@ -28,6 +38,7 @@ export default class Photo extends Component {
                         position: 'absolute',
                         bottom: 50,
                         left: 30,
+                        zIndex: 2
                     }}>
                         <Image
                             source={{ uri: 'http://119.96.189.81:7788/ABoa/9995.jpg' }}
@@ -44,6 +55,7 @@ export default class Photo extends Component {
                         position: 'absolute',
                         bottom: 58,
                         left: 90,
+                        zIndex: 2
                     }}>
                         <Text style={{
                             color: '#fff'
@@ -58,6 +70,7 @@ export default class Photo extends Component {
                         position: 'absolute',
                         bottom: 2,
                         left: 0,
+                        zIndex: 2,
                         flexDirection: 'row'
                     }}>
                         <View style={{
@@ -79,6 +92,7 @@ export default class Photo extends Component {
                         position: 'absolute',
                         bottom: 0,
                         left: 0,
+                        zIndex: 2,
                         flexDirection: 'row'
                     }}>
                         <View style={{ flex: 1, height: 2, backgroundColor: 'transparent' }}>
