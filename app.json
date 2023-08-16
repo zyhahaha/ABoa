@@ -31,6 +31,10 @@
       "eas": {
         "projectId": "2221afbc-86ed-40d2-aeb3-f5c799da6971"
       }
+    },
+    "androidStatusBar": {
+        "translucent": true,
+        "hidden": false
     }
   }
 }
