@@ -31,7 +31,7 @@ export default ({tabIndex, setTabIndex}) => {
                 />
             </Tab> */}
 
-            <TabView value={tabIndex} onChange={setTabIndex} animationType="spring">
+            <TabView value={tabIndex} onChange={setTabIndex} animationType="timing" minSwipeRatio={0.2} minSwipeSpeed={0.5}>
                 <TabView.Item style={{ backgroundColor: '', width: '100%' }}>
                     <Events />
                 </TabView.Item>
