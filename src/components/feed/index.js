@@ -8,6 +8,18 @@ export default class Photo extends Component {
     }
 
     render() {
+        const birthMonth = 3
+        const birthDate = 17
+
+        let growMonth = (new Date()).getMonth() + 1 - birthMonth
+        let growDate = 0
+        const nowDate = (new Date()).getDate()
+        if (nowDate < birthDate) {
+            growMonth = growMonth - 1
+            growDate = 30 - Math.abs(nowDate - birthDate)
+        } else {
+            growDate = nowDate - birthDate
+        }
         return (
             <>
                 <View style={{
@@ -62,7 +74,7 @@ export default class Photo extends Component {
                         }}>赵小福</Text>
                         <Text style={{
                             color: '#fff'
-                        }}>4个月28天</Text>
+                        }}>{growMonth}个月{growDate}天</Text>
                     </View>
 
                     <View style={{
