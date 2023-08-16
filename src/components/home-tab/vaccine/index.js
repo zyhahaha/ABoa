@@ -34,6 +34,20 @@ export default () => {
                             placeholder="输入药品名"
                             onChangeText={updateSearch}
                             value={search}
+                            cancelButtonTitle="取消"
+                            cancelButtonProps={{
+                                fontSize: 14
+                            }}
+                            inputStyle={{
+                                fontSize: 14
+                            }}
+                            inputContainerStyle={{
+                                height: 38,
+                                margin: 10,
+                                backgroundColor: '#F5F5F5'
+                            }}
+                            containerStyle={{
+                            }}
                         />
                     </View>
                     <View style={{
