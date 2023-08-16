@@ -18,6 +18,7 @@ export default () => {
     const nowDate = (new Date()).getDate()
 
     const [search, setSearch] = React.useState("");
+    const [resultList, setResultList] = React.useState([{name: '非布司他', type: '增加药物剂量'}, {name: '非布司他', type: '增加药物剂量'}]);
 
     const updateSearch = (search) => {
         // console.log(search)
@@ -51,26 +52,32 @@ export default () => {
                             }}
                         />
                     </View>
-                    <View style={{
-                        marginTop: 15,
-                        marginBottom: 15
-                    }}>
-
-                        <View style={{
-                            marginLeft: 10,
-                            padding: 10,
-                            backgroundColor: '#fff'
-                        }}>
-                            <Text style={{
-                                fontSize: 14
-                            }}>药品名：非布司他</Text>
-                            <Text style={{
-                                marginTop: 5,
-                                fontSize: 12,
-                                color: '#8F8F8F'
-                            }}>用药建议：增加药物剂量</Text>
-                        </View>
-                    </View>
+                    {
+                        resultList.map(resultItem => {
+                            return (
+                                <View style={{
+                                    marginTop: 15,
+                                    marginBottom: 15
+                                }}>
+            
+                                    <View style={{
+                                        marginLeft: 10,
+                                        padding: 10,
+                                        backgroundColor: '#fff'
+                                    }}>
+                                        <Text style={{
+                                            fontSize: 14
+                                        }}>药品名：{resultItem.name}</Text>
+                                        <Text style={{
+                                            marginTop: 5,
+                                            fontSize: 12,
+                                            color: '#8F8F8F'
+                                        }}>用药建议：{resultItem.type}</Text>
+                                    </View>
+                                </View>
+                            )
+                        })
+                    }
 
                     {/* 疫苗 */}
                     <View style={{
