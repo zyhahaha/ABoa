@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
+import { replace } from './router/RootNavigation'; // 这个是封装的一个工具，用来进行在js代码中的跳转的
 import {
   StyleSheet,
   View,
@@ -77,6 +78,8 @@ export default class LoginScreen2 extends Component {
         isEmailValid: this.validateEmail(email) || this.emailInput.shake(),
         isPasswordValid: password.length >= 8 || this.passwordInput.shake(),
       });
+
+      replace('HomeScreen')
     }, 1500);
   }
 
@@ -137,7 +140,7 @@ export default class LoginScreen2 extends Component {
                     styles.categoryText,
                     isLoginPage && styles.selectedCategoryText,
                   ]}
-                  title={'Login'}
+                  title={' '} // 登录
                 />
                 <Button
                   disabled={isLoading}
@@ -149,13 +152,13 @@ export default class LoginScreen2 extends Component {
                     styles.categoryText,
                     isSignUpPage && styles.selectedCategoryText,
                   ]}
-                  title={'Sign up'}
+                  title={' '} // 注册
                 />
               </View>
-              <View style={styles.rowSelector}>
+              {/* <View style={styles.rowSelector}>
                 <TabSelector selected={isLoginPage} />
                 <TabSelector selected={isSignUpPage} />
-              </View>
+              </View> */}
               <View style={styles.formContainer}>
                 <Input
                   leftIcon={
@@ -269,7 +272,7 @@ export default class LoginScreen2 extends Component {
                 />
               </View>
             </KeyboardAvoidingView>
-            <View style={styles.helpContainer}>
+            {/* <View style={styles.helpContainer}>
               <Button
                 title={'Need help ?'}
                 titleStyle={{ color: 'white' }}
@@ -277,7 +280,7 @@ export default class LoginScreen2 extends Component {
                 underlayColor="transparent"
                 onPress={() => console.log('Account created')}
               />
-            </View>
+            </View> */}
           </View>
         </ImageBackground>
       </View>
