@@ -6,12 +6,12 @@ export default [
   {
     name: 'LoginScreen',
     component: LoginScreen,
-    // options: { ...headerOptions, headerTransparent: false },
+    options: { headerShown: false },
   },
   // 首页
   {
     name: 'HomeScreen',
     component: HomeScreen,
-    // options: headerOptions,
+    options: { headerShown: false },
   },
 ]
