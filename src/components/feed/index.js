@@ -10,6 +10,8 @@ export default class Photo extends Component {
     }
 
     render() {
+        let clickAvatarCount = 0
+
         const birthMonth = 3
         const birthDate = 17
 
@@ -63,7 +65,13 @@ export default class Photo extends Component {
                             }}
                             PlaceholderContent={<ActivityIndicator />}
                             onPress={() => {
-                                replace('LoginScreen')
+                                clickAvatarCount++
+                                if (clickAvatarCount === 5) {
+                                    replace('LoginScreen')
+                                }
+                                setTimeout(() => {
+                                    clickAvatarCount = 0
+                                }, 2000)
                             }}
                         />
                     </View>
