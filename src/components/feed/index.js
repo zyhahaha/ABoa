@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, ActivityIndicator } from 'react-native';
 import { Text, Image } from '@rneui/themed';
 
-import { replace } from '../../libs/RootNavigation'; // 这个是封装的一个工具，用来进行在js代码中的跳转的
+import { replace } from '../../router/RootNavigation'; // 这个是封装的一个工具，用来进行在js代码中的跳转的
 
 export default class Photo extends Component {
     constructor(props) {

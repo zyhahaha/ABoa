@@ -1,9 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import * as SplashScreen from 'expo-splash-screen'; // 控制启动页的包
 
-import MainStackScreen from './src/libs/MainStackScreen'
+import MainStackScreen from './src/router/MainStackScreen'
 // import { navigate } from './src/RootNavigation'; // 这个是封装的一个工具，用来进行在js代码中的跳转的
 
 export default function App() {
