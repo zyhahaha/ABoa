@@ -1,21 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import * as SplashScreen from 'expo-splash-screen'; // 控制启动页的包
 
 import MainStackScreen from './src/router/MainStackScreen'
-// import { navigate } from './src/RootNavigation'; // 这个是封装的一个工具，用来进行在js代码中的跳转的
 
 export default function App() {
-  const [appIsReady, setAppIsReady] = useState(true);
-  // const [root, setRoot] = useState();
+  const [appIsReady, setAppIsReady] = useState(false);
   useEffect(() => {
     SplashScreen.preventAutoHideAsync(); // 保证项目启动后，系统启动页一直显示
   }, []);
 
-  // setTimeout(() => {
-  //   setAppIsReady(true)
-  // }, 0)
+  setTimeout(() => {
+    setAppIsReady(true)
+  }, 1000) // 一秒后隐藏启动页，模拟网络请求
 
   if (!appIsReady) {
     return null;
@@ -24,30 +20,6 @@ export default function App() {
   }
 
   return (
-    // <View style={styles.container}>
       <MainStackScreen />
-    // </View>
-    // <RootSiblingParent>
-    // <MainStackScreen />
-    // </RootSiblingParent>
-    // <View style={styles.container}>
-    //   <Text>Open up App.js to start working on your app!</Text>
-    //   <Button
-    //     onPress={() => navigate('LoginScreen')}
-    //     title="Learn More"
-    //     color="#841584"
-    //     accessibilityLabel="Learn more about this purple button"
-    //   />
-    //   <StatusBar style="auto" />
-    // </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
