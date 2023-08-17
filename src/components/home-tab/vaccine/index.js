@@ -59,9 +59,9 @@ export default () => {
                         />
                     </View>
                     {
-                        searchKeyword && resultList.map(resultItem => {
+                        searchKeyword && resultList.map((resultItem, resultIndex) => {
                             return (
-                                <View style={{
+                                <View key={resultIndex.toString()} style={{
                                     marginTop: 15,
                                     marginBottom: 15
                                 }}>
@@ -100,9 +100,9 @@ export default () => {
                                 }}>
                                     {/* 疫苗列表 */}
                                     {
-                                        recordList.map(recordItem => {
+                                        recordList.map((recordItem, recordIndex) => {
                                             return (
-                                                <View style={{
+                                                <View key={recordIndex.toString()} style={{
                                                     marginBottom: 15
                                                 }}>
                                                     <View style={{
