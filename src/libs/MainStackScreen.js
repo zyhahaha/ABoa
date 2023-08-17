@@ -2,7 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 
-import LaunchScreen from '../pages/login'; // 这是我的登录页的第一个界面
+import LaunchScreen from '../login'; // 这是我的登录页的第一个界面
 import HomePage from '../home'; // 这是tabbar界面
 import { navigationRef } from './RootNavigation'; // 这个是封装的一个工具，用来进行在js代码中的跳转的
 import stacks from '../router/index'; // 这个文件里面放了项目中所有用到的界面
