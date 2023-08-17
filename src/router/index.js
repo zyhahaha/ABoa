@@ -1,5 +1,5 @@
-import LoginScreen from '../pages/login';
-import UserDetails from '../pages/user';
+import LoginScreen from '../login';
+import HomeScreen from '../home';
 
 export default [
   // 登录界面
@@ -8,10 +8,10 @@ export default [
     component: LoginScreen,
     // options: { ...headerOptions, headerTransparent: false },
   },
-  // 用户详情
+  // 首页
   {
-    name: 'UserDetails',
-    component: UserDetails,
+    name: 'HomeScreen',
+    component: HomeScreen,
     // options: headerOptions,
   },
 ]
