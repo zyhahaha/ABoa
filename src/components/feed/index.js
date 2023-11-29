@@ -41,7 +41,7 @@ export default class Photo extends Component {
                     }}></View>
 
                     <Image
-                        source={{ uri: 'http://119.96.189.81:7788/ABoa/9993.jpg' }}
+                        source={{ uri: 'http://1.94.7.83:7788/ABoa/9993.jpg' }}
                         containerStyle={{
                             width: '100%',
                             flex: 1,
@@ -57,7 +57,7 @@ export default class Photo extends Component {
                         zIndex: 2
                     }}>
                         <Image
-                            source={{ uri: 'http://119.96.189.81:7788/ABoa/9995.jpg' }}
+                            source={{ uri: 'http://1.94.7.83:7788/ABoa/9995.jpg' }}
                             containerStyle={{
                                 width: 50,
                                 height: 50,

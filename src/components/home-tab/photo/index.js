@@ -25,23 +25,23 @@ import ImageViewer from 'react-native-image-zoom-viewer';
 //     }
 // }]
 const images = [
-    { url: 'http://119.96.189.81:7788/ABoa/111.jpg' },
-    { url: 'http://119.96.189.81:7788/ABoa/222.jpg' },
-    { url: 'http://119.96.189.81:7788/ABoa/333.jpg' },
-    { url: 'http://119.96.189.81:7788/ABoa/444.jpg' },
-    { url: 'http://119.96.189.81:7788/ABoa/555.jpg' },
-    { url: 'http://119.96.189.81:7788/ABoa/666.jpg' },
-    { url: 'http://119.96.189.81:7788/ABoa/777.jpg' },
-    { url: 'http://119.96.189.81:7788/ABoa/888.jpg' },
-    { url: 'http://119.96.189.81:7788/ABoa/999.jpg' },
-    { url: 'http://119.96.189.81:7788/ABoa/9990.jpg' },
-    { url: 'http://119.96.189.81:7788/ABoa/9991.jpg' },
-    { url: 'http://119.96.189.81:7788/ABoa/9992.jpg' },
-    { url: 'http://119.96.189.81:7788/ABoa/9993.jpg' },
-    { url: 'http://119.96.189.81:7788/ABoa/9994.jpg' },
-    { url: 'http://119.96.189.81:7788/ABoa/9995.jpg' },
-    // { url: 'http://119.96.189.81:7788/ABoa/v2.mp4' },
-    // { url: 'http://119.96.189.81:7788/ABoa/v3.mp4' }
+    { url: 'http://1.94.7.83:7788/ABoa/111.jpg' },
+    { url: 'http://1.94.7.83:7788/ABoa/222.jpg' },
+    { url: 'http://1.94.7.83:7788/ABoa/333.jpg' },
+    { url: 'http://1.94.7.83:7788/ABoa/444.jpg' },
+    { url: 'http://1.94.7.83:7788/ABoa/555.jpg' },
+    { url: 'http://1.94.7.83:7788/ABoa/666.jpg' },
+    { url: 'http://1.94.7.83:7788/ABoa/777.jpg' },
+    { url: 'http://1.94.7.83:7788/ABoa/888.jpg' },
+    { url: 'http://1.94.7.83:7788/ABoa/999.jpg' },
+    { url: 'http://1.94.7.83:7788/ABoa/9990.jpg' },
+    { url: 'http://1.94.7.83:7788/ABoa/9991.jpg' },
+    { url: 'http://1.94.7.83:7788/ABoa/9992.jpg' },
+    { url: 'http://1.94.7.83:7788/ABoa/9993.jpg' },
+    { url: 'http://1.94.7.83:7788/ABoa/9994.jpg' },
+    { url: 'http://1.94.7.83:7788/ABoa/9995.jpg' },
+    // { url: 'http://1.94.7.83:7788/ABoa/v2.mp4' },
+    // { url: 'http://1.94.7.83:7788/ABoa/v3.mp4' }
     // {
     //     url: 'https://ts1.cn.mm.bing.net/th/id/R-C.b61e85948514dde6c8f2997871c60766?rik=WSmrFRL1fzIM2A&riu=http%3a%2f%2fpic1.bbzhi.com%2ffengjingbizhi%2fdiqiuguibaodachicunziranfengjingbizhijingxuandiyiji%2fnature_2008_landscape_1680_desktop_01_20183_11.jpg&ehk=UHw5ouJjdlJ4utvTAdWd8UZTuIpkI%2fMSeyoP%2fjtTbpQ%3d&risl=&pid=ImgRaw&r=0'
     // }, {
@@ -171,7 +171,7 @@ export default class Photo extends Component {
 //                     keyExtractor={(e) => e}
 //                     renderItem={({ item }) => (
 //                         <Image
-//                             source={{ uri: 'http://119.96.189.81:7788/images/%E6%9A%97%E9%BB%91%E6%B3%95%E6%9C%AF%E5%B7%A5%E5%8E%82.png' }}
+//                             source={{ uri: 'http://1.94.7.83:7788/images/%E6%9A%97%E9%BB%91%E6%B3%95%E6%9C%AF%E5%B7%A5%E5%8E%82.png' }}
 //                             containerStyle={styles.item}
 //                             PlaceholderContent={<ActivityIndicator />}
 //                         />

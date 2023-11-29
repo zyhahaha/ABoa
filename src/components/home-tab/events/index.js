@@ -94,7 +94,7 @@ export default () => {
                                     flexDirection: 'row'
                                 }}>
                                     <Image
-                                        source={{ uri: 'http://119.96.189.81:7788/ABoa/9992.jpg' }}
+                                        source={{ uri: 'http://1.94.7.83:7788/ABoa/9992.jpg' }}
                                         containerStyle={{
                                             aspectRatio: 1,
                                             // width: 120,
@@ -103,7 +103,7 @@ export default () => {
                                         }}
                                         PlaceholderContent={<ActivityIndicator />}
                                         onPress={() => {
-                                            setImagesUrl([{url: 'http://119.96.189.81:7788/ABoa/9992.jpg'}])
+                                            setImagesUrl([{url: 'http://1.94.7.83:7788/ABoa/9992.jpg'}])
                                             setModalVisible(true)
                                         }}
                                     />
@@ -195,7 +195,7 @@ export default () => {
                                     flexDirection: 'row'
                                 }}>
                                     <Image
-                                        source={{ uri: 'http://119.96.189.81:7788/ABoa/999.jpg' }}
+                                        source={{ uri: 'http://1.94.7.83:7788/ABoa/999.jpg' }}
                                         containerStyle={{
                                             aspectRatio: 1,
                                             // width: 120,
@@ -204,7 +204,7 @@ export default () => {
                                         }}
                                         PlaceholderContent={<ActivityIndicator />}
                                         onPress={() => {
-                                            setImagesUrl([{ url: 'http://119.96.189.81:7788/ABoa/999.jpg' }])
+                                            setImagesUrl([{ url: 'http://1.94.7.83:7788/ABoa/999.jpg' }])
                                             setModalVisible(true)
                                         }}
                                     />
