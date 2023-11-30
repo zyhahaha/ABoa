@@ -74,7 +74,7 @@ export default () => {
                             {
                                 recordList.map((recordItem, recordIndex) => {
                                     return (
-                                        <View style={{
+                                        <View key={recordIndex.toString()} style={{
                                             marginBottom: 15
                                         }}>
                                             <View style={{
@@ -95,11 +95,11 @@ export default () => {
                                                 <Text>{recordItem.date}</Text>
                                             </View>
                                             {
-                                                recordItem.contents.map(recordContentItem => {
+                                                recordItem.contents.map((recordContentItem, recordContentIndex) => {
                                                     if (recordContentItem.type === 'photo') {
                                                         // 照片
                                                         return (
-                                                            <View style={{
+                                                            <View key={recordContentIndex.toString()} style={{
                                                                 marginBottom: 15,
                                                                 marginLeft: 10,
                                                                 backgroundColor: '#fff',
@@ -144,7 +144,7 @@ export default () => {
                                                     } else if (recordContentItem.type === 'BMI') {
                                                         // 身高体重
                                                         return (
-                                                            <View style={{
+                                                            <View key={recordContentIndex.toString()} style={{
                                                                 marginBottom: 15,
                                                                 marginLeft: 10,
                                                                 padding: 10,
