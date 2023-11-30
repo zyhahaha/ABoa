@@ -28,6 +28,7 @@ export default function BottomTabScreen() {
                     onPress={() => console.log('Add Something')}
                 />
                 <SpeedDial.Action
+                    color='#F3C026'
                     icon={{ type: 'font-awesome-5', name: 'poo', color: '#fff' }}
                     title="便便"
                     onPress={() => console.log('Delete Something')}
