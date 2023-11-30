@@ -4,13 +4,35 @@ import React from 'react';
 import Feed from './components/feed'
 import HomeTab from './components/home-tab'
 
+import { SpeedDial } from '@rneui/themed';
+
 export default function BottomTabScreen() {
     const [index, setIndex] = React.useState(0);
+    const [open, setOpen] = React.useState(false);
 
     return (
         <>
             <Feed tabIndex={index} setTabIndex={setIndex} />
             <HomeTab tabIndex={index} setTabIndex={setIndex} />
+
+            <SpeedDial
+                isOpen={open}
+                icon={{ name: 'edit', color: '#fff' }}
+                openIcon={{ name: 'close', color: '#fff' }}
+                onOpen={() => setOpen(!open)}
+                onClose={() => setOpen(!open)}
+            >
+                <SpeedDial.Action
+                    icon={{ type: 'entypo', name: 'bowl', color: '#fff' }}
+                    title="吃饭"
+                    onPress={() => console.log('Add Something')}
+                />
+                <SpeedDial.Action
+                    icon={{ name: 'delete', color: '#fff' }}
+                    title="Delete"
+                    onPress={() => console.log('Delete Something')}
+                />
+            </SpeedDial>
         </>
 
         // <Button title='Welcome' />
