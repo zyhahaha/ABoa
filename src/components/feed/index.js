@@ -105,11 +105,11 @@ export default class Photo extends Component {
                         <View onStartShouldSetResponder={() => this.props.setTabIndex(1)} style={{
                             flex: 1,
                             height: 25,
-                        }}><Text style={{ textAlign: 'center', color: '#fff' }}>相册</Text></View>
+                        }}><Text style={{ textAlign: 'center', color: '#fff' }}>疫苗接种</Text></View>
                         <View onStartShouldSetResponder={() => this.props.setTabIndex(2)} style={{
                             flex: 1,
                             height: 25,
-                        }}><Text style={{ textAlign: 'center', color: '#fff' }}>疫苗接种</Text></View>
+                        }}><Text style={{ textAlign: 'center', color: '#fff' }}>相册</Text></View>
                     </View>
 
                     <View style={{

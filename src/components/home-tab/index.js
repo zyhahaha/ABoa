@@ -36,10 +36,10 @@ export default ({tabIndex, setTabIndex}) => {
                     <Events />
                 </TabView.Item>
                 <TabView.Item style={{ backgroundColor: '', width: '100%' }}>
-                    <Photo />
+                    <Vaccine />
                 </TabView.Item>
                 <TabView.Item style={{ backgroundColor: '', width: '100%' }}>
-                    <Vaccine />
+                    {/* <Photo /> */}
                 </TabView.Item>
             </TabView>
         </>
