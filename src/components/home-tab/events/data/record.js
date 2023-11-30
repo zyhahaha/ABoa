@@ -6,7 +6,7 @@ export default [
                 url: 'http://1.94.7.83:7788/ABoa/9992.jpg',
                 text: '上传了一张照片',
                 type: 'photo',
-                time: '15:30'
+                time: '7月22日 15:30'
             }
         ]
     }, {
@@ -16,7 +16,7 @@ export default [
                 height: '60',
                 weight: '5.6',
                 type: 'BMI',
-                time: '15:00'
+                time: '6月17日 15:00'
             }
         ]
     }, {
@@ -26,7 +26,7 @@ export default [
                 url: 'http://1.94.7.83:7788/ABoa/999.jpg',
                 text: '上传了一张照片',
                 type: 'photo',
-                time: '15:00'
+                time: '6月16日 15:00'
             }
         ]
     }, {
@@ -36,7 +36,7 @@ export default [
                 height: '54.5',
                 weight: '4.1',
                 type: 'BMI',
-                time: '15:03'
+                time: '4月29日 15:03'
             }
         ]
     }, {
@@ -46,7 +46,7 @@ export default [
                 height: '49',
                 weight: '2.85',
                 type: 'BMI',
-                time: '16:00'
+                time: '3月17日 16:00'
             }
         ]
     }
