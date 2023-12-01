@@ -60,8 +60,25 @@ export default () => {
                                     backgroundColor: '#fff'
                                 }}>
                                     <Text style={{
-                                        fontSize: 14
+                                        fontSize: 16
                                     }}>小福今天{computeCountDays(Date.parse('2023-03-17')).days}天了</Text>
+                                    <View style={{
+                                        paddingTop: 10,
+                                        paddingBottom: 10
+                                    }}>
+                                        <Text style={{
+                                            fontSize: 16
+                                        }}>今日奶量：</Text>
+                                        <Text style={{
+                                            fontSize: 14
+                                        }}>05: 30   150ml</Text>
+                                        <Text style={{
+                                            fontSize: 14
+                                        }}>05: 30   150ml</Text>
+                                        <Text style={{
+                                            fontSize: 14
+                                        }}>05: 30   150ml</Text>
+                                    </View>
                                     <Text style={{
                                         marginTop: 5,
                                         fontSize: 12,
