@@ -12,6 +12,7 @@
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/native-stack": "^6.9.13",
     "@rneui/base": "^4.0.0-rc.8",
+    "@rneui/layout": "^0.0.0-alpha.6",
     "@rneui/themed": "^4.0.0-rc.8",
     "expo": "~48.0.18",
     "expo-splash-screen": "~0.18.2",
