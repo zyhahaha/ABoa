@@ -8,13 +8,23 @@ import { SpeedDial, Dialog, Input, CheckBox } from '@rneui/themed';
 import {
     View
 } from 'react-native';
-import {Stack} from '@rneui/layout'
+import { Stack } from '@rneui/layout'
+import DateTimePicker from '@react-native-community/datetimepicker';
 
 export default function BottomTabScreen() {
     const [index, setIndex] = React.useState(0);
     const [open, setOpen] = React.useState(false);
     const [modalVisible, setModalVisible] = React.useState(true);
     const [checked, setChecked] = React.useState(1);
+
+    const [date, setDate] = React.useState(new Date(1598051730000));
+    const [mode, setMode] = React.useState('time');
+    
+    const onChange = (event, selectedDate) => {
+        const currentDate = selectedDate;
+        setShow(false);
+        setDate(currentDate);
+    };
 
     return (
         <>
@@ -74,6 +84,14 @@ export default function BottomTabScreen() {
                     <Input
                         placeholder=' 时间（几点几分）'
                         leftIcon={{ type: 'material-community', name: 'clock-digital' }}
+                    />
+                    <DateTimePicker
+                        testID="dateTimePicker"
+                        value={date}
+                        display="spinner"
+                        mode={mode}
+                        is24Hour={true}
+                        onChange={onChange}
                     />
                     <Input
                         placeholder=' 奶量（ml）'
