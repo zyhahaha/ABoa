@@ -60,15 +60,17 @@ export default () => {
                                     backgroundColor: '#fff'
                                 }}>
                                     <Text style={{
-                                        fontSize: 16
+                                        fontSize: 16,
+                                        // color: 'rgb(173, 20, 87)'
                                     }}>小福今天{computeCountDays(Date.parse('2023-03-17')).days}天了</Text>
                                     <View style={{
                                         paddingTop: 10,
                                         paddingBottom: 10
                                     }}>
                                         <Text style={{
-                                            fontSize: 16
-                                        }}>今日奶量：</Text>
+                                            fontSize: 14
+                                        }}>今日奶量：800ml</Text>
+                                        <View style={{ padding: 5 }}></View>
                                         <Text style={{
                                             fontSize: 14
                                         }}>05: 30   150ml</Text>
