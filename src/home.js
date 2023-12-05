@@ -4,7 +4,7 @@ import React from 'react';
 import Feed from './components/feed'
 import HomeTab from './components/home-tab'
 
-import { SpeedDial, Dialog, Input, CheckBox } from '@rneui/themed';
+import { SpeedDial, Dialog, Input, CheckBox, Button, Icon } from '@rneui/themed';
 import {
     View
 } from 'react-native';
@@ -18,7 +18,8 @@ export default function BottomTabScreen() {
     const [checked, setChecked] = React.useState(1);
 
     const [date, setDate] = React.useState(new Date(1598051730000));
-    const [mode, setMode] = React.useState('time');
+    // const [mode, setMode] = React.useState('time');
+    const [showDatePicker, setShowDatePicker] = React.useState(false);
     
     const onChange = (event, selectedDate) => {
         const currentDate = selectedDate;
@@ -81,21 +82,32 @@ export default function BottomTabScreen() {
                     style={{
                     }}
                 >
-                    <Input
-                        placeholder=' 时间（几点几分）'
-                        leftIcon={{ type: 'material-community', name: 'clock-digital' }}
-                    />
-                    <DateTimePicker
+                    <Stack row align="center">
+                        <Icon
+                            name='clock-digital'
+                            type='material-community'
+                            style={{ marginLeft: 10 }}
+                        />
+                        <Button
+                            title="时间（几点几分）"
+                            type="clear"
+                            onPress={() => {
+                                setShowDatePicker(true)
+                            }}
+                        />
+                    </Stack>
+                    {showDatePicker && (<DateTimePicker
                         testID="dateTimePicker"
                         value={date}
                         display="spinner"
-                        mode={mode}
+                        mode="time"
                         is24Hour={true}
                         onChange={onChange}
-                    />
+                    />)}
                     <Input
                         placeholder=' 奶量（ml）'
                         leftIcon={{ type: 'material-community', name: 'baby-bottle-outline' }}
+                        inputStyle={{ fontSize: 16 }}
                     />
                 </View>
                 <Dialog.Button
