@@ -36,6 +36,8 @@ export default function BottomTabScreen() {
         setDate(`${hours}:${minutes}`);
     };
 
+    const [number, onChangeNumber] = React.useState('');
+
     const [nowDay, setNowDay] = React.useState(dayjs(Date.now()).format('MM.DD'));
 
     return (
@@ -127,20 +129,26 @@ export default function BottomTabScreen() {
                         leftIcon={{ type: 'material-community', name: 'baby-bottle-outline' }}
                         leftIconContainerStyle={{ marginRight: 5 }}
                         inputStyle={{ fontSize: 15 }}
+                        onChangeText={onChangeNumber}
+                        value={number}
                     />
                 </View>
                 <Dialog.Button
                     title="保 存"
                     onPress={() => {
+                        if (!number || !date) return
+                        
                         const paramsDate = dayjs(Date.now() - (checked === 1 ? 0 : 86400000)).format('YYYY-MM-DD')
                         const params = {
                             type: 'bowl',
                             date_time: `${paramsDate} ${date}:00`,
-                            value: '100'
+                            value: number
                         }
                         console.log(params)
                         axios.post('http://1.94.7.83:8877/aboa', params).then(res => {
                             console.log(res.data)
+                        }).finally(() => {
+                            setModalVisible(false)
                         })
                     }}
                 />
