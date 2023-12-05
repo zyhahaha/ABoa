@@ -114,7 +114,8 @@ export default function BottomTabScreen() {
                     <Input
                         placeholder=' 奶量（ml）'
                         leftIcon={{ type: 'material-community', name: 'baby-bottle-outline' }}
-                        inputStyle={{ fontSize: 16 }}
+                        leftIconContainerStyle={{ marginRight: 5 }}
+                        inputStyle={{ fontSize: 15 }}
                     />
                 </View>
                 <Dialog.Button
