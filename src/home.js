@@ -40,10 +40,12 @@ export default function BottomTabScreen() {
 
     const [nowDay, setNowDay] = React.useState(dayjs(Date.now()).format('MM.DD'));
 
+    const [isReload, setIsReload] = React.useState(true)
+
     return (
         <>
             <Feed tabIndex={index} setTabIndex={setIndex} />
-            <HomeTab tabIndex={index} setTabIndex={setIndex} />
+            {isReload && (<HomeTab tabIndex={index} setTabIndex={setIndex} />)}
 
             <SpeedDial
                 isOpen={open}
@@ -153,6 +155,11 @@ export default function BottomTabScreen() {
                             setDate('')
                             setNowDay(dayjs(Date.now()).format('MM.DD'))
                             onChangeNumber('')
+
+                            setIsReload(false)
+                            setTimeout(() => {
+                                setIsReload(true)
+                            }, 200)
                         })
                     }}
                 />

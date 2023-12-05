@@ -21,8 +21,12 @@ export default () => {
     const nowMonth = (new Date()).getMonth() + 1
     const nowDate = (new Date()).getDate()
 
-    axios.get('http://1.94.7.83:8877/aboa').then(res => {
+    const [dataList, setDataList] = React.useState(recordList)
+
+    axios.get('http://1.94.7.83:8877/aboa', { type: 'bowl' }).then(res => {
         console.log(res.data?.data?.list)
+        const resList = res.data?.data?.list || []
+        setDataList(recordList.concat(...resList))
     })
     return (
         <>
