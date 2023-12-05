@@ -137,7 +137,7 @@ export default function BottomTabScreen() {
                     title="保 存"
                     onPress={() => {
                         if (!number || !date) return
-                        
+
                         const paramsDate = dayjs(Date.now() - (checked === 1 ? 0 : 86400000)).format('YYYY-MM-DD')
                         const params = {
                             type: 'bowl',
@@ -149,6 +149,10 @@ export default function BottomTabScreen() {
                             console.log(res.data)
                         }).finally(() => {
                             setModalVisible(false)
+                            setChecked(1)
+                            setDate('')
+                            setNowDay(dayjs(Date.now()).format('MM.DD'))
+                            onChangeNumber('')
                         })
                     }}
                 />
