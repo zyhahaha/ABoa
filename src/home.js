@@ -17,14 +17,21 @@ export default function BottomTabScreen() {
     const [modalVisible, setModalVisible] = React.useState(true);
     const [checked, setChecked] = React.useState(1);
 
-    const [date, setDate] = React.useState(new Date(1598051730000));
+    const [date, setDate] = React.useState('');
     // const [mode, setMode] = React.useState('time');
     const [showDatePicker, setShowDatePicker] = React.useState(false);
     
     const onChange = (event, selectedDate) => {
-        const currentDate = selectedDate;
-        setShow(false);
-        setDate(currentDate);
+        // const currentDate = selectedDate;
+        setShowDatePicker(false);
+        console.log(selectedDate)
+
+        const hours = selectedDate.getHours()
+        const minutes = selectedDate.getMinutes()
+
+        if (hours <= 9) hours = '0' + hours
+        if (minutes <= 9) minutes = '0' + minutes
+        setDate(`${hours}: ${minutes}`);
     };
 
     return (
@@ -89,7 +96,7 @@ export default function BottomTabScreen() {
                             style={{ marginLeft: 10 }}
                         />
                         <Button
-                            title="时间（几点几分）"
+                            title={date ? date : "时间（几点几分）"}
                             type="clear"
                             onPress={() => {
                                 setShowDatePicker(true)
@@ -98,7 +105,7 @@ export default function BottomTabScreen() {
                     </Stack>
                     {showDatePicker && (<DateTimePicker
                         testID="dateTimePicker"
-                        value={date}
+                        value={new Date(Date.now())}
                         display="spinner"
                         mode="time"
                         is24Hour={true}
