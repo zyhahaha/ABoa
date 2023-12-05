@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import { Stack } from '@rneui/layout'
 import DateTimePicker from '@react-native-community/datetimepicker';
+import axios from 'axios';
 
 export default function BottomTabScreen() {
     const [index, setIndex] = React.useState(0);
@@ -24,7 +25,7 @@ export default function BottomTabScreen() {
     const onChange = (event, selectedDate) => {
         // const currentDate = selectedDate;
         setShowDatePicker(false);
-        console.log(selectedDate)
+        // console.log(selectedDate)
 
         const hours = selectedDate.getHours()
         const minutes = selectedDate.getMinutes()
@@ -121,8 +122,9 @@ export default function BottomTabScreen() {
                 <Dialog.Button
                     title="保 存"
                     onPress={() => {
-                        // console.log(`Option ${checked} was selected!`);
-                        // toggleDialog5();
+                        axios.post('http://1.94.7.83:8877/aboa').then(res => {
+                            console.log(res.data)
+                        })
                     }}
                 />
             </Dialog>

@@ -9,6 +9,7 @@ import {
 import { Text, Image } from '@rneui/themed';
 import ImageViewer from 'react-native-image-zoom-viewer';
 import computeCountDays from './utils/compute.js'
+import axios from 'axios';
 
 import recordList from './data/record.js'
 
@@ -19,6 +20,10 @@ export default () => {
 
     const nowMonth = (new Date()).getMonth() + 1
     const nowDate = (new Date()).getDate()
+
+    axios.get('http://1.94.7.83:8877/aboa').then(res => {
+        console.log(res.data?.data?.list)
+    })
     return (
         <>
             <SafeAreaView>
