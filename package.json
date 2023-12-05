@@ -16,6 +16,7 @@
     "@rneui/layout": "^0.0.0-alpha.6",
     "@rneui/themed": "^4.0.0-rc.8",
     "axios": "^1.6.2",
+    "dayjs": "^1.11.10",
     "expo": "~48.0.18",
     "expo-splash-screen": "~0.18.2",
     "expo-status-bar": "~1.4.4",

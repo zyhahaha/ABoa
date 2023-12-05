@@ -11,6 +11,7 @@ import {
 import { Stack } from '@rneui/layout'
 import DateTimePicker from '@react-native-community/datetimepicker';
 import axios from 'axios';
+import dayjs from 'dayjs';
 
 export default function BottomTabScreen() {
     const [index, setIndex] = React.useState(0);
@@ -32,8 +33,10 @@ export default function BottomTabScreen() {
 
         if (hours <= 9) hours = '0' + hours
         if (minutes <= 9) minutes = '0' + minutes
-        setDate(`${hours}: ${minutes}`);
+        setDate(`${hours}:${minutes}`);
     };
+
+    const [nowDay, setNowDay] = React.useState(dayjs(Date.now()).format('MM.DD'));
 
     return (
         <>
@@ -72,7 +75,7 @@ export default function BottomTabScreen() {
                 statusBarTranslucent={true}
                 onBackdropPress={() => setModalVisible(false)}
             >
-                <Dialog.Title title="记录 12.01" />
+                <Dialog.Title title={'记录 ' + nowDay} />
                 <Stack row align="center" spacing={1}>
                     {['今天', '昨天'].map((l, i) => (
                         <CheckBox
@@ -82,7 +85,14 @@ export default function BottomTabScreen() {
                         checkedIcon="dot-circle-o"
                         uncheckedIcon="circle-o"
                         checked={checked === i + 1}
-                        onPress={() => setChecked(i + 1)}
+                        onPress={() => {
+                            setChecked(i + 1)
+                            if (i === 0) {
+                                setNowDay(dayjs(Date.now()).format('MM.DD'))
+                            } else if (i === 1) {
+                                setNowDay(dayjs(Date.now() - 86400000).format('MM.DD'))
+                            }
+                        }}
                         />
                     ))}
                 </Stack>
@@ -122,7 +132,14 @@ export default function BottomTabScreen() {
                 <Dialog.Button
                     title="保 存"
                     onPress={() => {
-                        axios.post('http://1.94.7.83:8877/aboa').then(res => {
+                        const paramsDate = dayjs(Date.now() - (checked === 1 ? 0 : 86400000)).format('YYYY-MM-DD')
+                        const params = {
+                            type: 'bowl',
+                            date_time: `${paramsDate} ${date}:00`,
+                            value: '100'
+                        }
+                        console.log(params)
+                        axios.post('http://1.94.7.83:8877/aboa', params).then(res => {
                             console.log(res.data)
                         })
                     }}
